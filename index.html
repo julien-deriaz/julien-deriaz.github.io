@@ -6,7 +6,6 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<title>Julien Dériaz – Compositeur et designer sonore</title>
 <meta name="robots" content="max-image-preview:large">
-<link rel="dns-prefetch" href="//cdn.elementor.com">
 <link rel="alternate" type="application/rss+xml" title="Julien Dériaz » Feed" href="https://julien-deriaz.pages.dev/feed/">
 <link rel="alternate" type="application/rss+xml" title="Julien Dériaz » Comments Feed" href="https://julien-deriaz.pages.dev/comments/feed/">
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://julien-deriaz.pages.dev/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fhttps%3A%2F%2Fjulien-deriaz.pages.dev%2F">
@@ -15,7 +14,6 @@
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
 </style>
-
 <style id="wp-emoji-styles-inline-css">
 
 	img.wp-smiley, img.emoji {
@@ -36,8 +34,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 :root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
 /*# sourceURL=global-styles-inline-css */
 </style>
-<link rel="stylesheet" id="ea11y-widget-fonts-css" href="https://julien-deriaz.pages.dev/wp-content/plugins/pojo-accessibility/assets/build/fonts.css?ver=3.9.1" media="all">
-<link rel="stylesheet" id="ea11y-skip-link-css" href="https://julien-deriaz.pages.dev/wp-content/plugins/pojo-accessibility/assets/build/skip-link.css?ver=3.9.1" media="all">
 <link rel="stylesheet" id="hello-elementor-css" href="https://julien-deriaz.pages.dev/wp-content/themes/hello-elementor/assets/css/reset.css?ver=3.4.5" media="all">
 <link rel="stylesheet" id="hello-elementor-theme-style-css" href="https://julien-deriaz.pages.dev/wp-content/themes/hello-elementor/assets/css/theme.css?ver=3.4.5" media="all">
 <link rel="stylesheet" id="hello-elementor-header-footer-css" href="https://julien-deriaz.pages.dev/wp-content/themes/hello-elementor/assets/css/header-footer.css?ver=3.4.5" media="all">
@@ -63,33 +59,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel="canonical" href="https://julien-deriaz.pages.dev/">
 <link rel="shortlink" href="https://julien-deriaz.pages.dev/">
 </head>
-<body class="home wp-singular page-template-default page page-id-352 wp-embed-responsive wp-theme-hello-elementor eio-default ally-default hello-elementor-default elementor-default elementor-kit-341 elementor-page elementor-page-352">
+<body class="home wp-singular page-template-default page page-id-352 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-kit-341 elementor-page elementor-page-352">
 
-		<script>
-			const onSkipLinkClick = () => {
-				const htmlElement = document.querySelector('html');
 
-				htmlElement.style['scroll-behavior'] = 'smooth';
-
-				setTimeout( () => htmlElement.style['scroll-behavior'] = null, 1000 );
-			}
-			document.addEventListener("DOMContentLoaded", () => {
-				if (!document.querySelector('#content')) {
-					document.querySelector('.ea11y-skip-to-content-link').remove();
-				}
-			});
-		</script>
-		<nav aria-label="Skip to content navigation">
-			<a class="ea11y-skip-to-content-link" href="#content" tabindex="1" onclick="onSkipLinkClick()">
-				Skip to content
-				<svg width="24" height="24" viewbox="0 0 24 24" fill="none" role="presentation">
-					<path d="M18 6V12C18 12.7956 17.6839 13.5587 17.1213 14.1213C16.5587 14.6839 15.7956 15 15 15H5M5 15L9 11M5 15L9 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-				</svg>
-			</a>
-			<div class="ea11y-skip-to-content-backdrop"></div>
-		</nav>
-
-		
+<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
 <header id="site-header" class="site-header dynamic-header ">
 	<div class="header-inner">
@@ -229,46 +202,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-			<script>
-				const registerAllyAction = () => {
-					if ( ! window?.elementorAppConfig?.hasPro || ! window?.elementorFrontend?.utils?.urlActions ) {
-						return;
-					}
-
-					elementorFrontend.utils.urlActions.addAction( 'allyWidget:open', () => {
-						if ( window?.ea11yWidget?.widget?.open ) {
-							window.ea11yWidget.widget.open();
-						}
-					} );
-				};
-
-				const waitingLimit = 30;
-				let retryCounter = 0;
-
-				const waitForElementorPro = () => {
-					return new Promise( ( resolve ) => {
-						const intervalId = setInterval( () => {
-							if ( retryCounter === waitingLimit ) {
-								resolve( null );
-							}
-
-							retryCounter++;
-
-							if ( window.elementorFrontend && window?.elementorFrontend?.utils?.urlActions ) {
-								clearInterval( intervalId );
-								resolve( window.elementorFrontend );
-							}
-								}, 100 ); // Check every 100 milliseconds for availability of elementorFrontend
-					});
-				};
-
-				waitForElementorPro().then( () => { registerAllyAction(); });
-			</script>
-			<script id="ea11y-widget-js-extra">
-var ea11yWidget = {"iconSettings":{"style":{"icon":"person","size":"medium","color":"#2563eb"},"position":{"desktop":{"hidden":false,"enableExactPosition":false,"exactPosition":{"horizontal":{"direction":"right","value":10,"unit":"px"},"vertical":{"direction":"bottom","value":10,"unit":"px"}},"position":"bottom-right"},"mobile":{"hidden":false,"enableExactPosition":false,"exactPosition":{"horizontal":{"direction":"right","value":10,"unit":"px"},"vertical":{"direction":"bottom","value":10,"unit":"px"}},"position":"bottom-right"}}},"toolsSettings":{"bigger-text":{"enabled":true},"bigger-line-height":{"enabled":true},"text-align":{"enabled":true},"readable-font":{"enabled":true},"grayscale":{"enabled":true},"contrast":{"enabled":true},"page-structure":{"enabled":true},"sitemap":{"enabled":false,"url":"https://julien-deriaz.pages.dev/wp-sitemap.xml"},"reading-mask":{"enabled":true},"hide-images":{"enabled":true},"pause-animations":{"enabled":true},"highlight-links":{"enabled":true},"focus-outline":{"enabled":true},"screen-reader":{"enabled":false},"remove-elementor-label":{"enabled":false}},"accessibilityStatementURL":"","analytics":{"enabled":false,"url":null}};
-//# sourceURL=ea11y-widget-js-extra
-</script>
-<script src="https://cdn.elementor.com/a11y/widget.js?api_key=ea11y-707697fe-6465-4316-af67-1c2d8d50410e&amp;ver=3.9.1" id="ea11y-widget-js"referrerPolicy="origin"></script>
 <script src="https://julien-deriaz.pages.dev/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=3.4.5" id="hello-theme-frontend-js"></script>
 <script src="https://julien-deriaz.pages.dev/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.34.0" id="elementor-webpack-runtime-js"></script>
 <script src="https://julien-deriaz.pages.dev/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.34.0" id="elementor-frontend-modules-js"></script>
@@ -302,4 +235,4 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 </script>
 
 </body>
-</html><!-- Page supported by LiteSpeed Cache 7.7 on 2026-01-05 16:13:11 -->
+</html>
