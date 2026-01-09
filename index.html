@@ -339,19 +339,19 @@ document.getElementById('email-to-copy').addEventListener('click', function() {
 				</div>
 				<div class="elementor-element elementor-element-d562998 elementor-widget elementor-widget-html" data-id="d562998" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
-					<span id="email-to-copy" style="cursor: pointer; text-decoration: none; color: black; transition: color 0.3s ease;" onmouseover="this.style.color='gray'" onmouseout="this.style.color='black'">
+					<span id="email-to-copy-footer" style="cursor: pointer; text-decoration: none; color: black; transition: color 0.3s ease;" onmouseover="this.style.color='gray'" onmouseout="this.style.color='black'">
     contact@julien-deriaz.com
 </span>
-<span id="copy-feedback" style="margin-left: 10px; color: gray; display: none;">
+<span id="copy-feedback-footer" style="margin-left: 10px; color: gray; display: none;">
     ✓ Copié !
 </span>
 
 <script>
-document.getElementById('email-to-copy').addEventListener('click', function() {
+document.getElementById('email-to-copy-footer').addEventListener('click', function() {
     navigator.clipboard.writeText('contact@julien-deriaz.com').then(function() {
-        document.getElementById('copy-feedback').style.display = 'inline';
+        document.getElementById('copy-feedback-footer').style.display = 'inline';
         setTimeout(function() {
-            document.getElementById('copy-feedback').style.display = 'none';
+            document.getElementById('copy-feedback-footer').style.display = 'none';
         }, 2000);
     });
 });
